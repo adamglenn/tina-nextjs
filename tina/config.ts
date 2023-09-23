@@ -9,9 +9,9 @@ const branch =
   process.env.HEAD
 
 export default defineConfig({
-  clientId: process.env.TINA_PUBLIC_CLIENT_ID || "",
+  clientId: process.env.TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
-  branch,
+  branch: "master",
   build: {
     publicFolder: "public",
     outputFolder: "admin",
