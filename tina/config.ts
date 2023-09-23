@@ -34,7 +34,6 @@ export default defineConfig({
             if(props.document._sys.relativePath === 'home.md') {
               return "/"
             }
-            return props.document._sys.filename
           },
         },
         fields: [
