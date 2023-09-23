@@ -3,6 +3,17 @@ import { defineConfig } from "tinacms"
 import { FeaturedIcons } from "../components/icons"
 import { IconSelector } from "./icon-select"
 
+const slugify = (values) => {
+  return `${(values?.name || values?.title || `document-${Date.now()}`)
+    .toLowerCase()
+    .split(' ')
+    .join('-')}`
+}
+
+const router = ({ document, collection }) => {
+  return `/${document._sys.filename}`
+}
+
 export default defineConfig({
   branch: process.env.VERCEL_GIT_COMMIT_REF || "",
   clientId: process.env.TINA_CLIENT_ID || "",
@@ -25,9 +36,11 @@ export default defineConfig({
         path: "content/pages",
         format: "md",
         ui: {
-          router: (props) => {
-            return "/"
+          filename: {
+            slugify: slugify,
+            readonly: true,
           },
+          router,
         },
         fields: [
           {
