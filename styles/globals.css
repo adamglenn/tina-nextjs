@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_55 Roman";
+    src:url("Fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),url("Fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff");
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_56 Italic";
+    src:url("Fonts/4bd56f95-e7ab-4a32-91fd-b8704cbd38bc.woff2") format("woff2"),url("Fonts/4fe1c328-1f21-434a-8f0d-5e0cf6c70dfb.woff") format("woff");
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_75 Bold";
+    src:url("Fonts/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2") format("woff2"),url("Fonts/7b415a05-784a-4a4c-8c94-67e9288312f5.woff") format("woff");
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_76 Bd It";
+    src:url("Fonts/13ab58b4-b5ba-4c95-afde-ab2608fbbbd9.woff2") format("woff2"),url("Fonts/5018b5b5-c821-4653-bc74-d0b11d735f1a.woff") format("woff");
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_97 Blk C";
+    src:url("Fonts/f2f49a5e-567d-4dfa-8152-c28c8f60c84e.woff2") format("woff2"),url("Fonts/ea7ce364-9de4-43c3-9b0b-7b26af453629.woff") format("woff");
+  }
+  @font-face{
+    font-family:"Helvetica Neue LT W05_45 Light";
+    src:url("Fonts/f9c5199e-a996-4c08-9042-1eb845bb7495.woff2") format("woff2"),url("Fonts/2a34f1f8-d701-4949-b12d-133c1c2636eb.woff") format("woff");
+  }
+  @font-face{
+    font-family:"IowanOldStyleW01-Roman";
+    src:url("Fonts/e0f84cf2-b11c-4916-b67b-27693ebe8e05.woff2") format("woff2"),url("Fonts/863734b6-8216-4909-a79c-ee5681fb63c5.woff") format("woff");
+  }
+  @font-face{
+    font-family:"IowanOldStyleW01-Italic1120392";
+    src:url("Fonts/7079937d-67db-4807-8125-01d448fd6903.woff2") format("woff2"),url("Fonts/c2c018b6-1513-4832-bb72-2a9d074bb098.woff") format("woff");
+  }
+  @font-face{
+    font-family:"IowanOldStyleW01-Black";
+    src:url("Fonts/b71793d6-6081-43ff-a4af-a9529077af5f.woff2") format("woff2"),url("Fonts/1bd1b228-a01f-41e8-8dd8-743461eced15.woff") format("woff");
+  }
+  @font-face{
+    font-family:"IowanOldStyleW01-BlackI";
+    src:url("Fonts/83c03022-495c-46c5-9720-1921c37edb2b.woff2") format("woff2"),url("Fonts/702591b0-4649-4812-88b0-406590f969e6.woff") format("woff");
+  }
+  .font-wvuShout {
+    text-transform: uppercase;
+    line-height: 0.80487em !important;
+  }
+}
