@@ -3,10 +3,15 @@ import { defineConfig } from "tinacms"
 import { FeaturedIcons } from "../components/icons"
 import { IconSelector } from "./icon-select"
 
+const branch =
+  process.env.NEXT_PUBLIC_TINA_BRANCH ||
+  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD
+
 export default defineConfig({
-  branch: process.env.VERCEL_GIT_COMMIT_REF || "",
-  clientId: process.env.TINA_CLIENT_ID || "",
+  clientId: process.env.TINA_PUBLIC_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
+  branch,
   build: {
     publicFolder: "public",
     outputFolder: "admin",
