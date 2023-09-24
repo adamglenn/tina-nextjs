@@ -30,10 +30,16 @@ export default defineConfig({
         path: "content/pages",
         format: "md",
         ui: {
-          router: (props) => {
-            if(props.document._sys.relativePath === 'home.md') {
-              return "/"
+          router: ({ document }) => {
+            // navigate to the home page
+            if (document._sys.filename === 'home') {
+              return '/'
             }
+            // navigate to the about page
+            if (document._sys.filename === 'about') {
+              return `/about`
+            }
+            return undefined
           },
         },
         fields: [

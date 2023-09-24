@@ -1,6 +1,9 @@
 ---
 title: About
 blocks:
-  - _template: welcomeHero
+  - message: |
+      Hi
+    _template: welcomeHero
 ---
+
 
