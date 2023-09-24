@@ -2,7 +2,7 @@
 title: About
 blocks:
   - message: |
-      Hi
+      About Hero
     _template: welcomeHero
 ---
 
